@@ -1,0 +1,110 @@
+:root {
+  --navy: #15104a;
+  --purple: #3a1f78;
+  --panel: #ffffff;
+  --text: #1d1a3a;
+  --muted: #5b5785;
+  --gold: #ffc233;
+  --orange: #ff8a1f;
+  --link: #2f5fd0;
+  --draft-bg: #fff5d6;
+  --draft-border: #f0b429;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --panel: #1f1a52;
+    --text: #f1efff;
+    --muted: #c9c6f5;
+    --link: #8bb8ff;
+    --draft-bg: #3a2f10;
+    --draft-border: #b8860b;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Nunito", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background: linear-gradient(180deg, var(--navy) 0%, #241a6e 45%, var(--purple) 100%) fixed;
+  min-height: 100vh;
+}
+
+.hero {
+  text-align: center;
+  padding: 40px 16px 24px;
+  color: #fff;
+}
+
+.bomb {
+  font-size: 56px;
+  filter: drop-shadow(0 0 18px rgba(255, 138, 31, 0.7));
+}
+
+.hero h1 {
+  margin: 8px 0 0;
+  font-size: clamp(26px, 6vw, 40px);
+  font-weight: 800;
+  color: var(--gold);
+  text-shadow: 0 3px 0 #0a0830;
+}
+
+.hero h1 span { color: #5cd6ff; }
+
+.sub {
+  margin: 4px 0 0;
+  font-size: 18px;
+  color: #c9c6f5;
+  font-weight: 700;
+}
+
+.card {
+  max-width: 760px;
+  margin: 0 auto 32px;
+  padding: 24px 20px;
+  background: var(--panel);
+  border-radius: 24px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+@media (min-width: 800px) {
+  .card { margin-left: auto; margin-right: auto; padding: 32px 40px; }
+}
+
+h2 {
+  font-size: 20px;
+  margin: 28px 0 8px;
+  color: var(--text);
+  border-left: 4px solid var(--orange);
+  padding-left: 10px;
+}
+
+.meta { color: var(--muted); font-weight: 700; }
+
+.draft {
+  background: var(--draft-bg);
+  border: 1px solid var(--draft-border);
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+a { color: var(--link); }
+
+code {
+  font-size: 0.9em;
+  word-break: break-all;
+}
+
+ul { padding-left: 20px; }
+
+footer {
+  text-align: center;
+  color: #c9c6f5;
+  padding: 0 16px 32px;
+  font-size: 14px;
+}
